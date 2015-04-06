@@ -78,7 +78,7 @@ public class GeoLocationService extends AsyncTask<Void, Void, String>
           e.printStackTrace();
         }
 
-        return getAdressActionBackup(lat, lon);
+        return getAddressActionBackup(lat, lon);
     }
 
     @Override
@@ -87,7 +87,7 @@ public class GeoLocationService extends AsyncTask<Void, Void, String>
         onTaskComplete.setMyTaskComplete(message);
     }
 
-    private String getAdressActionBackup(double lat, double lon)
+    private String getAddressActionBackup(double lat, double lon)
     {
         String string ="http://maps.googleapis.com/maps/api/geocode/json?sensor=false&latlng=" + lat + "," + lon;
         String responseString = "";
